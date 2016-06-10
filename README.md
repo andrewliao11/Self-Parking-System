@@ -45,7 +45,7 @@ if (distance is far away)
 else
     do the backward/forward parking
 ```
-**Here is the illustration of the above alogorithms(2,3):**
+**Here is the illustration of the above alogorithms(2,3):**   
 ![](https://github.com/andrewliao11/ee240500/blob/master/illustration.png?raw=true)   
 4. Accelerometer   
 The key of using accelerometer is to access the data from it. I modify the kl25_sensors.c to output the data from the acceleromete, and use it to control the car in the way similar to keyboard handler.   
