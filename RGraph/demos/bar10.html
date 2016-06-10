@@ -1,0 +1,42 @@
+<!DOCTYPE html >
+<html>
+<head>
+    <link rel="stylesheet" href="demos.css" type="text/css" media="screen" />
+    
+    <script type="text/javascript" src="../libraries/RGraph.common.core.js" ></script>
+    <script type="text/javascript" src="../libraries/RGraph.bar.js" ></script>
+    <!--[if lt IE 9]><script src="../excanvas/excanvas.js"></script><![endif]-->
+    
+    <title>A grouped bar chart</title>
+</head>
+<body>
+        
+    <h1>A grouped bar chart</h1>
+    
+    <p>
+        This is a grouped Bar chart.
+    </p>
+
+    <canvas id="cvs" width="400" height="150">[No canvas support]</canvas>
+
+    <script>
+        window.onload = function ()
+        {
+            var bar9 = new RGraph.Bar('cvs', [[1250,1450,750,450],[1300,1375,750,525],[1500,1480,650,600],[1450,1500,700,450]])
+            bar9.Set('chart.labels', ['2008','2009','2010','2011']);
+            bar9.Set('chart.colors', ['#C7CFC7','#B2C8B2','#D9E0DE','#CDDED1']);
+            bar9.Set('chart.hmargin', 15);
+            bar9.Set('chart.gutter.left', 35);
+            bar9.Set('chart.background.grid.vlines', false);
+            bar9.Set('chart.background.grid.border', false);
+            bar9.Draw();
+        }
+    </script>
+
+
+    <p>
+        <a href="./">&laquo; Back</a>
+    </p>
+
+</body>
+</html>
