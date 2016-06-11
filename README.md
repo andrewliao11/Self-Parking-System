@@ -49,6 +49,21 @@ else
 ![](https://github.com/andrewliao11/ee240500/blob/master/illustration.png?raw=true)   
 4. Accelerometer   
 The key of using accelerometer is to access the data from it. I modify the kl25_sensors.c to output the data from the acceleromete, and use it to control the car in the way similar to keyboard handler.   
+[This line](https://github.com/andrewliao11/Self-Parking-System/blob/master/kl25_sensors.c#L122) is used for saving the data from accelerometer to a specific file(xdata.0  and xdata.1) and if we want to access the data from this file, just use the followinf snippet:
+```
+var jobject = eval("(" + result + ")");
+if(jobject.time>timecycle){
+    if(jobject.xarray.length==0) throw "no data";
+	else{
+	    for (i=0;i<jobject.xarray.length;i++){
+		d1[i]=jobject.xarray[i][0];
+		d2[i]=jobject.xarray[i][1];
+		d3[i]=jobject.xarray[i][2];
+		d4[i]=jobject.xarray[i][3];
+	    }
+    }
+}
+```   
 
 ## Additional: recording path on the screen 
 Record the path on the screen, and flush whenever the change mode
